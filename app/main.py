@@ -10,7 +10,7 @@ async def lifespan(_: FastAPI):
 
     yield
 app = FastAPI(
-    title="Astronomy API",
+    title="SkyQuery - Astronomy API",
     description="API for receiving astronomical data about a specific city.",
     version="0.2",
     lifespan=lifespan
