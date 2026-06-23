@@ -1,6 +1,6 @@
 import sqlite3
 import datetime as dt
-from database.models import HistoryModel
+from app.database.models import HistoryModel
 from contextlib import contextmanager
 
 @contextmanager

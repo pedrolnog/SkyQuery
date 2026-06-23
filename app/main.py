@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from routes.astronomy import router
 from contextlib import asynccontextmanager
-from database.connection import get_connection, create_tables
+from app.routes.astronomy import router
+from app.database.connection import get_connection, create_tables
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):

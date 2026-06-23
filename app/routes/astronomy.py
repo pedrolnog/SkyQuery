@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException
-from schemas.astronomy_models import AstronomyResponse
-from database.models import HistoryModel
-from database.connection import get_search_history
-from exceptions.exceptions import ProviderAPIError, LocationNotFoundError, ProviderSchemaError
-from services.astronomy_service import receive_astro_data
+from app.schemas.astronomy_models import AstronomyResponse
+from app.database.models import HistoryModel
+from app.database.connection import get_search_history
+from app.exceptions.exceptions import ProviderAPIError, LocationNotFoundError, ProviderSchemaError
+from app.services.astronomy_service import receive_astro_data
 
 router = APIRouter()
 @router.get("/astronomy", status_code=200, response_model=AstronomyResponse, summary="Returns astronomical data about a city.", description = "Returns information about a city's sunrise, sunset and day length based on its geographical coordinates.", tags=["Astronomy"])

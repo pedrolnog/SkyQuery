@@ -1,5 +1,5 @@
 import requests
-from exceptions.exceptions import LocationNotFoundError, ProviderAPIError, ProviderSchemaError
+from app.exceptions.exceptions import LocationNotFoundError, ProviderAPIError, ProviderSchemaError
 
 
 def locate_city(city_name: str) -> tuple[float, float]:

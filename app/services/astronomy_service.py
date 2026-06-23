@@ -1,9 +1,9 @@
 import requests
 import datetime as dt
-from schemas.astronomy_models import DayLength, AstronomyResponse
-from services.geo_service import locate_city
-from database.connection import save_search
-from exceptions.exceptions import ProviderSchemaError, ProviderAPIError
+from app.schemas.astronomy_models import DayLength, AstronomyResponse
+from app.services.geo_service import locate_city
+from app.database.connection import save_search
+from app.exceptions.exceptions import ProviderSchemaError, ProviderAPIError
 
 def calculate_day_length(sunrise: dt.datetime, sunset: dt.datetime) -> DayLength:
     day_length_seconds = int((sunset - sunrise).total_seconds())

@@ -1,5 +1,4 @@
 from pydantic import BaseModel, Field
-import datetime as dt
 
 class HistoryModel(BaseModel):
     """"
