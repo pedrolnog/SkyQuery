@@ -1,5 +1,20 @@
+.venv/
+venv/
+env/
+ENV/
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+*.db
+*.sqlite3
+
 .env
-.gitignore
+.vscode/
+.idea/
 
 test_main.http
-*.db
